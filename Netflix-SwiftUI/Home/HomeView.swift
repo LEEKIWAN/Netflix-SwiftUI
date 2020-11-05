@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    let screen = UIScreen.main.bounds
+    
     var vm = HomeVM()
     
     var body: some View {
@@ -17,6 +20,10 @@ struct HomeView: View {
             
             ScrollView(showsIndicators: false) {
                 LazyVStack {
+                    
+                    TopMoviePreview(movie: exampleMovie1)
+//                        .frame(width: screen.width)
+                    
                     ForEach(vm.allCategories, id: \.self) { cateogry in
                         VStack {
                             HStack {
@@ -40,6 +47,7 @@ struct HomeView: View {
                     }
                 }
             }
+            .edgesIgnoringSafeArea(.top)
             
             
         }

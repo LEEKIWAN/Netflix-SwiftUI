@@ -18,10 +18,11 @@ struct TopMoviePreview: View {
                 .scaledToFill()
                 .clipped()
             
-            VStack {
+            VStack(spacing: 8.0) {
                 Spacer()
                 
                 HStack {
+                    
                     ForEach(movie.categories, id: \.self) { category in
                         HStack {
                             Text(category)
@@ -34,7 +35,25 @@ struct TopMoviePreview: View {
                     }
                 }
                 
-                Text("Button on rows")
+                HStack {
+                    Spacer()
+                    SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: false) {
+                        print("Tapped")
+                    }
+                    Spacer()
+                    
+                    WhiteButton(text: "Play", imageName: "play.fill") {
+                        print("D")
+                    }
+                    .frame(width: 120)
+                    
+                    Spacer()
+                    SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
+                        print("Tapped")
+                    }
+                    Spacer()
+                }
+                
             }
 
         }

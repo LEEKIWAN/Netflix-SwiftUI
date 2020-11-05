@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		836AB54B254E9938002F8268 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836AB54A254E9938002F8268 /* HomeVM.swift */; };
+		836F00AC2553AFD300D46281 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F00AB2553AFD300D46281 /* WhiteButton.swift */; };
 		836FA366254E8702008952A8 /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836FA365254E8702008952A8 /* NetflixApp.swift */; };
 		836FA36A254E8703008952A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FA369254E8703008952A8 /* Assets.xcassets */; };
 		836FA36D254E8703008952A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FA36C254E8703008952A8 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		836AB54A254E9938002F8268 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		836F00AB2553AFD300D46281 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		836FA362254E8702008952A8 /* Netflix-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		836FA365254E8702008952A8 /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		836FA369254E8703008952A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				836FA365254E8702008952A8 /* NetflixApp.swift */,
 				836FA392254E94C4008952A8 /* GlobalHelpers.swift */,
+				836F00AB2553AFD300D46281 /* WhiteButton.swift */,
 				83F344672552F6D60008FD38 /* SmallVerticalButton.swift */,
 				83F34462255045B90008FD38 /* Model */,
 				836FA379254E892B008952A8 /* Home */,
@@ -187,6 +190,7 @@
 				836FA393254E94C4008952A8 /* GlobalHelpers.swift in Sources */,
 				836AB54B254E9938002F8268 /* HomeVM.swift in Sources */,
 				836FA366254E8702008952A8 /* NetflixApp.swift in Sources */,
+				836F00AC2553AFD300D46281 /* WhiteButton.swift in Sources */,
 				836FA38C254E93F5008952A8 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

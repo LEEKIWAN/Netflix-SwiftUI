@@ -14,17 +14,36 @@ struct SmallVerticalButton: View {
     
     var isOn: Bool
     
+    var action: () -> ()
+    
     var imageName: String {
         isOn ? isOnImage : isOffImage
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            action()
+        }, label: {
+            VStack(spacing: 8.0) {
+                Image(systemName: imageName)
+                Text(text)
+                    .font(.system(size: 14))
+                    .bold()
+            }
+            .foregroundColor(.white)
+        })
     }
 }
 
 struct SmallVerticalButton_Previews: PreviewProvider {
     static var previews: some View {
-        SmallVerticalButton(text: "My List", isOnImage: <#String#>, isOffImage: <#String#>, isOn: <#Bool#>)
+        
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: false) {
+                print("Tapped")
+            }
+        }
     }
 }
