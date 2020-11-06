@@ -19,7 +19,7 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView(showsIndicators: false) {
-                LazyVStack {
+                VStack {                 // LAZYVSTACK
                     
                     TopMoviePreview(movie: exampleMovie1)
 //                        .frame(width: screen.width)
@@ -47,9 +47,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .edgesIgnoringSafeArea(.top)
-            
-            
+            .edgesIgnoringSafeArea(.top)            
         }
         .foregroundColor(.white)
         
