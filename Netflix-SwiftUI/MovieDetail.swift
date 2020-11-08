@@ -34,7 +34,16 @@ struct MovieDetail: View {
                             .frame(width: screen.width / 2.5)
                                                 
                         MovieInfoSubHeadline(movie: movie)
+                        
+                        if let promotionHeadline =  movie.promotionHeadline {
+                            Text(promotionHeadline)
+                        }
+                        
+                        PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red) {
+                            
+                        }
                     }
+                    .padding(.horizontal, 10)
                 }
                 
                 Spacer()
@@ -55,15 +64,33 @@ struct MovieInfoSubHeadline: View {
     var movie: Movie
     
     var body: some View {
-        HStack {
+        HStack(spacing: 20.0) {
             Image(systemName: "hand.thumbsup.fill")
+                .foregroundColor(.white)
             
-            Text("MOVIE YEAR")
-            Text("RATING")
+            Text(String(movie.year))
+            RatingView(rating: movie.rating)
+                
             
-            Text("seasons")
+            Text(movie.numberOfSeasonsDisplay)
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 6.0)
         .foregroundColor(.gray)
+    }
+}
+
+struct RatingView: View {
+    var rating: String
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(.gray)
+            
+            Text(rating)
+                .foregroundColor(.white)
+                .font(.system(size: 12))
+                .bold()
+        }
+        .frame(width: 50, height: 20, alignment: .center)
     }
 }
