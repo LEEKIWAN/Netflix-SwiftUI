@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8322AA1F255D283E00766502 /* CustomTapSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322AA1E255D283D00766502 /* CustomTapSwitcher.swift */; };
 		834A38DD255512DA00C910C8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A38DC255512DA00C910C8 /* TestView.swift */; };
 		834A38E5255521AC00C910C8 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A38E4255521AC00C910C8 /* MovieDetail.swift */; };
 		836AB54B254E9938002F8268 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836AB54A254E9938002F8268 /* HomeVM.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8322AA1E255D283D00766502 /* CustomTapSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTapSwitcher.swift; sourceTree = "<group>"; };
 		834A38DC255512DA00C910C8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		834A38E4255521AC00C910C8 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		836AB54A254E9938002F8268 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				836FA369254E8703008952A8 /* Assets.xcassets */,
 				836FA36E254E8703008952A8 /* Info.plist */,
 				834A38E4255521AC00C910C8 /* MovieDetail.swift */,
+				8322AA1E255D283D00766502 /* CustomTapSwitcher.swift */,
 				836FA36B254E8703008952A8 /* Preview Content */,
 			);
 			path = "Netflix-SwiftUI";
@@ -211,6 +214,7 @@
 				836FA390254E9472008952A8 /* StandardHomeMovie.swift in Sources */,
 				83EEF5692557D74300EA9671 /* Episode.swift in Sources */,
 				836FA377254E8923008952A8 /* HomeView.swift in Sources */,
+				8322AA1F255D283E00766502 /* CustomTapSwitcher.swift in Sources */,
 				83F344652550482E0008FD38 /* TopMoviePreview.swift in Sources */,
 				83F344682552F6D60008FD38 /* SmallVerticalButton.swift in Sources */,
 				836FA393254E94C4008952A8 /* GlobalHelpers.swift in Sources */,

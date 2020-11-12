@@ -62,6 +62,7 @@ struct MovieDetail: View {
                         }
                         .padding(.horizontal, 20)
                         
+                        CustomTapSwitcher(tabs: [.episodes, .trailers, .more])
                         
                     }
                     .padding(.horizontal, 10)
