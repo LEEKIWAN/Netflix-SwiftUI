@@ -20,5 +20,5 @@ struct Episode: Identifiable {
     
     var thumbnailURL: URL {
         URL(string: thumbnailImageURLString)!
-    } 
+    }
 }

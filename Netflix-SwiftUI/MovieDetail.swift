@@ -46,7 +46,7 @@ struct MovieDetail: View {
                         CurrentEpisodeInfoView(movie: movie)
                         CastInfoView(movie: movie)
                         
-                        HStack(spacing: 40) {
+                        HStack(spacing: 50) {
                             SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
                                 
                             }
@@ -62,7 +62,10 @@ struct MovieDetail: View {
                         }
                         .padding(.horizontal, 20)
                         
-                        CustomTapSwitcher(tabs: [.episodes, .trailers, .more])
+                        CustomTapSwitcher(tabs: [.episodes, .trailers, .more], movie: movie)
+                            .padding(.top, 20)
+                        
+                        
                         
                     }
                     .padding(.horizontal, 10)
@@ -78,7 +81,7 @@ struct MovieDetail: View {
 
 struct MovieDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail(movie: exampleMovie2)
+        MovieDetail(movie: exampleMovie1)
     }
 }
 

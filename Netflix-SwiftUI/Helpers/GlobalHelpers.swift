@@ -16,7 +16,8 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           numberOfSeasons: 1,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
-                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel"
+                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7]
 )
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Traveler",
@@ -27,6 +28,7 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
                           cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: [],
                           promotionHeadline: "Best Rated Show"
 )
 let exampleMovie3 = Movie(id: UUID().uuidString,
@@ -37,7 +39,8 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           numberOfSeasons: 3,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
-                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel"
+                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: []
 )
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
@@ -47,7 +50,8 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           numberOfSeasons: 4,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
-                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel"
+                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: []
 )
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hannibal",
@@ -57,7 +61,8 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           numberOfSeasons: 5,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
-                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel"
+                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: []
 )
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "After Life",
@@ -68,7 +73,19 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisode1,
                           creators: "Baran bo Odan, Jantje Friesee",
                           cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
-                          promotionHeadline: "Watch Season 6 Now"
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 6 Now"
+)
+
+let exampleMovie7 = Movie(id: UUID().uuidString,
+                          name: "After Life",
+                          thumbnailURL: URL(string: "https://picsum.photos/200/306")!,
+                          categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+                          year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 6,
+                          defaultEpisodeInfo: exampleEpisode1,
+                          creators: "Baran bo Odan, Jantje Friesee",
+                          cast: "Louis Hofmann, Oliver Masucci, jorids Tribel",
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 6 Now"
 )
 
 

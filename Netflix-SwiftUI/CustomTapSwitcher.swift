@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CustomTapSwitcher: View {
+    
+    @State private var currentTab: CustomTab = .episodes
+    
     var tabs: [CustomTab]
+    var movie: Movie
+    
     
     func widthForTab(tab: CustomTab) -> CGFloat {
         return tab.rawValue.widthOfString(usingFont: .systemFont(ofSize: 16, weight: .bold))
@@ -24,13 +29,17 @@ struct CustomTapSwitcher: View {
                         VStack {
                             Rectangle()
                                 .frame(width: widthForTab(tab: tab), height: 6)
+                                .foregroundColor(currentTab == tab ? .red : .clear)
+                            
                             Button(action: {
-                                
+                                currentTab = tab
                             }, label: {
                                 Text(tab.rawValue)
                                     .font(.system(size: 16, weight: .bold))
                             })
-                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(currentTab == tab ? .white : .gray)
+//                            .buttonStyle(PlainButtonStyle())
+                            .frame(width: widthForTab(tab: tab), height: 30, alignment: .center)
                         }
                         
                     }
@@ -38,7 +47,19 @@ struct CustomTapSwitcher: View {
                 
             })
             
-            Text("Selected View")
+            switch currentTab {
+            case .episodes:
+                SmallVerticalButton(text: "TEST", isOnImage: "", isOffImage: "", isOn: true) {
+                    
+                }
+            case .trailers:
+                Text("Trailers")
+            case .more:
+                MoreLikeThis(movies: movie.moreLikeThisMovies)
+                
+//                Text("asfd")
+            }
+            
         }
         .foregroundColor(.white)
         
@@ -56,7 +77,7 @@ struct CustomTapSwitcher_Previews: PreviewProvider {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            CustomTapSwitcher(tabs: [.episodes, .trailers, .more])
+            CustomTapSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
         }
         
     }
