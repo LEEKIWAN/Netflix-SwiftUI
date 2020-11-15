@@ -82,7 +82,7 @@ extension LinearGradient {
 }
 
 
-extension String {
+extension String { 
     
     func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
