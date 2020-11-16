@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+let exampleVideoURL = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!
+
+let exampleImageURL = URL(string: "https://picsum.photos/300/104")!
+
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300")!,
