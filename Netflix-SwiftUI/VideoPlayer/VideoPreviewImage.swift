@@ -18,7 +18,6 @@ struct VideoPreviewImage: View {
         ZStack {
             KFImage(imageURL)
                 .resizable()
-//                .scaledToFill()
                 .aspectRatio(contentMode: .fill)
             
             
