@@ -13,6 +13,12 @@ struct MovieDetail: View {
     
     var movie: Movie
     
+    
+    @State var showSeasonPicker = false
+    
+    @State var selectedSeason = 1
+    
+    
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -32,7 +38,7 @@ struct MovieDetail: View {
                     VStack {
                         StandardHomeMovie(movie: movie)
                             .frame(width: screen.width / 2.5)
-                                                
+                        
                         MovieInfoSubHeadline(movie: movie)
                         
                         if let promotionHeadline =  movie.promotionHeadline {
@@ -62,9 +68,11 @@ struct MovieDetail: View {
                         }
                         .padding(.horizontal, 20)
                         
-                        CustomTapSwitcher(tabs: [.episodes, .trailers, .more], movie: movie)
-                            .padding(.top, 20)
+//                        CustomTapSwitcher(tabs: [.episodes, .trailers, .more], movie: movie)
+//                            .padding(.top, 20)
                         
+                        CustomTapSwitcher(showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason, tabs: [.episodes, .trailers, .more], movie: movie)
+                            .padding(.top, 20)
                         
                         
                     }
@@ -74,6 +82,43 @@ struct MovieDetail: View {
                 Spacer()
             }
             .foregroundColor(.white)
+            
+            if showSeasonPicker {
+                Group {
+                    Color.black.opacity(0.9)
+                    
+                    VStack(spacing: 40.0) {
+                        Spacer()
+                        
+                        ForEach(0 ..< (movie.numberOfSeasons ?? 0)) { season in
+                            Button(action: {
+                                self.selectedSeason = season + 1
+                                self.showSeasonPicker = false
+                            }, label: {
+                                Text("Season \(season + 1)")
+                                    .foregroundColor(selectedSeason == season + 1 ? .white : .gray)
+                                    .bold()
+                                    .font(selectedSeason == season + 1 ? .title : .title2)
+                            })
+                        }
+                        
+                        Spacer()
+                        
+                        
+                        Button(action: {
+                            self.showSeasonPicker = false
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 40))
+                                .scaleEffect(x: 1.1)
+                        })
+                        .padding(.bottom, 30)
+                    }
+                    
+                }
+            }
+            
             
         }
     }
@@ -95,7 +140,7 @@ struct MovieInfoSubHeadline: View {
             
             Text(String(movie.year))
             RatingView(rating: movie.rating)
-                
+            
             
             Text(movie.numberOfSeasonsDisplay)
         }

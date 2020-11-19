@@ -13,14 +13,11 @@ struct MoreLikeThis: View {
     var columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        
-        ScrollView {
-            LazyVGrid(columns: columns) {
+        LazyVGrid(columns: columns) {
+            
+            ForEach(movies) { movie in
+                StandardHomeMovie(movie: movie)
                 
-                ForEach(movies) { movie in
-                    StandardHomeMovie(movie: movie)
-                
-                }
             }
         }
     }
