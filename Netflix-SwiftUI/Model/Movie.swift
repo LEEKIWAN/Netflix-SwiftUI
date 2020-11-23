@@ -13,6 +13,7 @@ struct Movie: Identifiable {
     var thumbnailURL: URL
     
     var categories: [String]
+    var genre: HomeGenre = .AllGenres
     
     // Movie Detail View
     var year: Int
@@ -30,6 +31,10 @@ struct Movie: Identifiable {
     var moreLikeThisMovies: [Movie]
     
     var episodes: [Episode]?
+    
+    var movieType: MovieType {
+        return episodes == nil ? .movie : .tvShow
+    }
     
     var promotionHeadline: String?
     
@@ -68,4 +73,10 @@ struct CurrentEpisodeInfo: Hashable, Equatable {
     var description: String
     var season: Int
     var episode: Int
+}
+
+
+enum MovieType {
+    case movie
+    case tvShow
 }
