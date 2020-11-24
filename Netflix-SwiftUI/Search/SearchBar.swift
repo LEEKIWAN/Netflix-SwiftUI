@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SearchBar: View {
     
-    @State private var text: String = ""
+    @Binding var text: String
+    
+    @State private var isEditing = false
+    
+    @Binding var isLoading: Bool
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -21,27 +25,51 @@ struct SearchBar: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(Color.white)
                     .padding(.leading, 10)
+
                 
-                TextField("Search", text: $text)
-                    .padding(7)
-                    .padding(.leading, -7)
-                    .padding(.horizontal, 10)
-                    .background(Color.graySearchBackground)
-                    .cornerRadius(8)
+                ZStack(alignment: .trailing) {
+                    TextField("Search", text: $text)
+                        .padding(7)
+
+                        .background(Color.graySearchBackground)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            isEditing = true
+                        }
+                
+                    if !text.isEmpty {
+                        if isLoading {
+                            ActivityIndicator(style: .medium, animate: .constant(true))
+                                .configure {
+                                    $0.color = .white
+                                }
+                                
+                                .frame(width: 35, height: 35)
+                        }
+                        else {
+                            Button(action: {
+                                text = ""
+                            }, label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundColor(Color.white)
+                                    .frame(width: 35, height: 35, alignment: .center)
+                            })
+                        }
+                    }
+                }
+                
+                if isEditing {
+                    Button(action: {
+                        text = ""
+                        isEditing = false
+                        hideKeyboard()
+                    }, label: {
+                        Text("Cancel")
+                    })
                     .foregroundColor(.white)
-                
-                Button(action: {}, label: {
-                    Image(systemName: "xmark.circle")
-                        .foregroundColor(Color.white)
-                        .frame(width: 35, height: 35, alignment: .center)
-                })
-                .padding(.trailing, 18)
-                
-                Button(action: {}, label: {
-                    Text("Cancel")
-                })
-                .foregroundColor(.white)
-                .padding(.trailing, 10)
+                    .padding(.trailing, 10)
+                }
                 
                 
             }
@@ -55,7 +83,7 @@ struct SearchBar_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            SearchBar()
+            SearchBar(text: .constant(""), isLoading: .constant(false))
                 .padding()
         }
         

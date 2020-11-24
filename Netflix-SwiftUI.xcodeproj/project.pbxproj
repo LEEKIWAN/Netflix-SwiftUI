@@ -12,6 +12,9 @@
 		830A40BF256274F8009A8A2A /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A40BE256274F8009A8A2A /* Trailer.swift */; };
 		830A40C22562755D009A8A2A /* SwiftUIVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A40C12562755D009A8A2A /* SwiftUIVideoView.swift */; };
 		8322AA1F255D283E00766502 /* CustomTapSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322AA1E255D283D00766502 /* CustomTapSwitcher.swift */; };
+		832FE9C7256D28CD009DB490 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FE9C6256D28CD009DB490 /* ActivityIndicator.swift */; };
+		832FE9CA256D2D1A009DB490 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FE9C9256D2D1A009DB490 /* SearchView.swift */; };
+		832FE9CD256D2D37009DB490 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FE9CC256D2D37009DB490 /* SearchVM.swift */; };
 		8339E104256517B9002615BA /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8339E103256517B9002615BA /* EpisodesView.swift */; };
 		834A38DD255512DA00C910C8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A38DC255512DA00C910C8 /* TestView.swift */; };
 		834A38E5255521AC00C910C8 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A38E4255521AC00C910C8 /* MovieDetail.swift */; };
@@ -41,6 +44,9 @@
 		830A40BE256274F8009A8A2A /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		830A40C12562755D009A8A2A /* SwiftUIVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVideoView.swift; sourceTree = "<group>"; };
 		8322AA1E255D283D00766502 /* CustomTapSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTapSwitcher.swift; sourceTree = "<group>"; };
+		832FE9C6256D28CD009DB490 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		832FE9C9256D2D1A009DB490 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		832FE9CC256D2D37009DB490 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		8339E103256517B9002615BA /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EpisodesView.swift; path = ../../../../Documents/EpisodesView.swift; sourceTree = "<group>"; };
 		834A38DC255512DA00C910C8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		834A38E4255521AC00C910C8 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				836FA392254E94C4008952A8 /* GlobalHelpers.swift */,
 				836115EB256B90AA0094A367 /* Colors.swift */,
+				832FE9C6256D28CD009DB490 /* ActivityIndicator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				836115E6256B8F230094A367 /* SearchBar.swift */,
+				832FE9C9256D2D1A009DB490 /* SearchView.swift */,
+				832FE9CC256D2D37009DB490 /* SearchVM.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -269,6 +278,7 @@
 				836FA390254E9472008952A8 /* StandardHomeMovie.swift in Sources */,
 				836115E4256B8BC70094A367 /* ContentView.swift in Sources */,
 				830A40BF256274F8009A8A2A /* Trailer.swift in Sources */,
+				832FE9C7256D28CD009DB490 /* ActivityIndicator.swift in Sources */,
 				83EEF5692557D74300EA9671 /* Episode.swift in Sources */,
 				836FA377254E8923008952A8 /* HomeView.swift in Sources */,
 				8322AA1F255D283E00766502 /* CustomTapSwitcher.swift in Sources */,
@@ -278,7 +288,9 @@
 				83F344682552F6D60008FD38 /* SmallVerticalButton.swift in Sources */,
 				836FA393254E94C4008952A8 /* GlobalHelpers.swift in Sources */,
 				836AB54B254E9938002F8268 /* HomeVM.swift in Sources */,
+				832FE9CD256D2D37009DB490 /* SearchVM.swift in Sources */,
 				836115EC256B90AA0094A367 /* Colors.swift in Sources */,
+				832FE9CA256D2D1A009DB490 /* SearchView.swift in Sources */,
 				834A38DD255512DA00C910C8 /* TestView.swift in Sources */,
 				83A8CB7D2561045800084FA4 /* MoreLikeThis.swift in Sources */,
 				835D73C1256A542200204FF3 /* HomeStack.swift in Sources */,
